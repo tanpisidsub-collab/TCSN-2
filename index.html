@@ -33,6 +33,12 @@
             margin-top: 0;
             text-align: center;
         }
+        p.subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
         .form-group {
             margin-bottom: 20px;
         }
@@ -74,21 +80,41 @@
 <body>
     <div class="container">
         <h2>TCSN Enterprise - Contact Us</h2>
-        <form action="#" method="POST">
+        <p class="subtitle">ระบบส่งข้อความติดต่อผู้บริหารผ่านอีเมลองค์กรโดยตรง</p>
+        
+        <!-- ใช้ JavaScript ดึงข้อมูลจากฟอร์มแล้วเปิดโปรแกรมเมลของผู้ใช้งานเพื่อส่งทันที -->
+        <form onsubmit="sendEmail(event)">
             <div class="form-group">
                 <label for="name">ชื่อ-นามสกุล / ผู้ติดต่อ</label>
-                <input type="text" id="name" name="name" required placeholder="กรอกชื่อของคุณ...">
+                <input type="text" id="name" required placeholder="กรอกชื่อของคุณ...">
             </div>
             <div class="form-group">
                 <label for="email">อีเมลสำหรับการติดต่อกลับ</label>
-                <input type="email" id="email" name="email" required placeholder="example@email.com">
+                <input type="email" id="email" required placeholder="example@email.com">
             </div>
             <div class="form-group">
                 <label for="message">ข้อความ / รายละเอียดที่ต้องการติดต่อ</label>
-                <textarea id="message" name="message" rows="5" required placeholder="พิมพ์ข้อความของคุณที่นี่..."></textarea>
+                <textarea id="message" rows="5" required placeholder="พิมพ์ข้อความของคุณที่นี่..."></textarea>
             </div>
             <button type="submit">ส่งข้อความถึงผู้บริหาร</button>
         </form>
     </div>
+
+    <script>
+        function sendEmail(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // กำหนดอีเมลผู้รับหลักขององค์กร (ท่านประธานสามารถเปลี่ยนอีเมลนี้ได้ตามต้องการ)
+            const recipient = "tanpisid.business@gmail.com";
+            const subject = encodeURIComponent("ติดต่อจากระบบพอร์ทัล: " + name);
+            const body = encodeURIComponent("ชื่อผู้ติดต่อ: " + name + "\nอีเมล: " + email + "\n\nข้อความ:\n" + message);
+
+            // เปิดแอปพลิเคชันอีเมลเพื่อส่งข้อความอัตโนมัติ
+            window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+        }
+    </script>
 </body>
 </html>
