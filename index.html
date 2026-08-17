@@ -1,34 +1,27 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <title>TCSN Enterprise | Main Portal</title>
-    <style>
-        :root { --bg: #0f172a; --card: #1e293b; --accent: #38bdf8; --text: #f8fafc; }
-        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 20px; }
-        nav { display: flex; justify-content: space-between; background: var(--card); padding: 15px 30px; border-radius: 8px; margin-bottom: 20px; }
-        nav a { color: var(--text); text-decoration: none; padding: 0 15px; font-weight: bold; }
-        nav a:hover { color: var(--accent); }
-        .container { background: var(--card); padding: 30px; border-radius: 12px; border-left: 4px solid var(--accent); }
-    </style>
-</head>
-<body>
+<!-- โครงสร้างเมนู (Navigation Menu) -->
+<nav>
+  <ul>
+    <li><a href="index.html">หน้าหลัก (ประชาสัมพันธ์)</a></li>
+    <li><a href="admin.html">ฝ่ายบริหาร</a></li>
+    <li><a href="contact.html">ติดต่อเรา</a></li>
+  </ul>
+</nav>
 
-    <!-- เมนูสำหรับหน้าหลัก -->
-    <nav>
-        <div><strong>TCSN Enterprise</strong></div>
-        <div>
-            <a href="index.html">หน้าหลัก</a>
-            <a href="executive.html">ฝ่ายบริหาร</a>
-        </div>
-    </nav>
+<!-- หน้าหลัก (ประชาสัมพันธ์ - สำหรับท่านประธานพิมพ์เนื้อหา) -->
+<section id="home">
+  <h1>ยินดีต้อนรับสู่ TCSN Enterprise</h1>
+  <div class="announcement-area">
+    <!-- พื้นที่สำหรับท่านประธานระบุข้อความประชาสัมพันธ์ -->
+    <p>[ท่านประธานสามารถแก้ไข/พิมพ์รายละเอียดประชาสัมพันธ์ตรงนี้ได้เลยครับ]</p>
+  </div>
+</section>
 
-    <!-- หน้าหลัก: แสดงเฉพาะช่องทางติดต่อ -->
-    <section class="container">
-        <h2>ช่องทางติดต่อองค์กร</h2>
-        <p>อีเมล: thaicybersecuritynormal@gmail.com</p>
-        <button onclick="window.location.href='mailto:thaicybersecuritynormal@gmail.com'" style="padding:10px; background:var(--accent); border:none; border-radius:5px; cursor:pointer;">ส่งอีเมลถึงเรา</button>
-    </section>
-
-</body>
-</html>
+<!-- หน้าติดต่อเรา (Contact Page) -->
+<section id="contact">
+  <h1>ติดต่อเรา</h1>
+  <p>ท่านสามารถติดต่อทีมงานหรือส่งข้อความถึงเราได้โดยตรงผ่านช่องทางด้านล่างนี้ครับ</p>
+  <div class="contact-info">
+    <p><strong>อีเมล:</strong> contact@tcsn-enterprise.com</p>
+    <a href="mailto:contact@tcsn-enterprise.com" style="padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px;">คลิกที่นี่เพื่อส่งอีเมล</a>
+  </div>
+</section>
