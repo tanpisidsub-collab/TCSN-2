@@ -6,33 +6,28 @@
     <style>
         :root { --bg: #0f172a; --card: #1e293b; --accent: #38bdf8; --text: #f8fafc; }
         body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 20px; }
-        
-        /* Navigation */
         nav { display: flex; justify-content: space-between; background: var(--card); padding: 15px 30px; border-radius: 8px; margin-bottom: 20px; }
         nav a { color: var(--text); text-decoration: none; padding: 0 15px; font-weight: bold; }
         nav a:hover { color: var(--accent); }
-
-        /* Executive Board Section */
-        .executive-board { background: var(--card); padding: 30px; border-radius: 12px; border-left: 4px solid var(--accent); }
-        .executive-name { font-size: 28px; color: var(--accent); font-weight: bold; margin-top: 10px; }
+        .container { background: var(--card); padding: 30px; border-radius: 12px; border-left: 4px solid var(--accent); }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- เมนูสำหรับหน้าหลัก -->
     <nav>
         <div><strong>TCSN Enterprise</strong></div>
         <div>
-            <a href="#">หน้าหลัก</a>
-            <a href="#">ฝ่ายบริหาร</a>
+            <a href="index.html">หน้าหลัก</a>
+            <a href="executive.html">ฝ่ายบริหาร</a>
         </div>
     </nav>
 
-    <!-- Executive Board Section -->
-    <section class="executive-board">
-        <h2>ฝ่ายบริหาร</h2>
-        <p>ประธานผู้บริหารสูงสุด</p>
-        <div class="executive-name">ธัญพิสิษฐ์</div>
+    <!-- หน้าหลัก: แสดงเฉพาะช่องทางติดต่อ -->
+    <section class="container">
+        <h2>ช่องทางติดต่อองค์กร</h2>
+        <p>อีเมล: thaicybersecuritynormal@gmail.com</p>
+        <button onclick="window.location.href='mailto:thaicybersecuritynormal@gmail.com'" style="padding:10px; background:var(--accent); border:none; border-radius:5px; cursor:pointer;">ส่งอีเมลถึงเรา</button>
     </section>
 
 </body>
