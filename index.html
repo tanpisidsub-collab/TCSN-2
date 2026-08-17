@@ -2,108 +2,44 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ติดต่อองค์กร - TCSN Enterprise</title>
+    <title>Main Portal - TCSN Enterprise</title>
     <style>
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --accent-color: #38bdf8;
-            --text-color: #f8fafc;
-            --text-muted: #94a3b8;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 600px;
-            margin: 40px auto;
-            background-color: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            border-left: 4px solid var(--accent-color);
-        }
-        h2 {
-            color: var(--accent-color);
-            margin-top: 0;
-            text-align: center;
-        }
-        p.subtitle {
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 14px;
-            margin-bottom: 25px;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--text-muted);
-            font-size: 14px;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #334155;
-            border-radius: 6px;
-            background-color: #0f172a;
-            color: var(--text-color);
-            box-sizing: border-box;
-        }
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--accent-color);
-        }
-        button {
-            width: 100%;
-            padding: 12px;
-            background-color: var(--accent-color);
-            color: #0f172a;
-            border: none;
-            border-radius: 6px;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            opacity: 0.9;
-        }
+        :root { --bg: #0f172a; --card: #1e293b; --accent: #38bdf8; --text: #f8fafc; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 20px; }
+        
+        /* เมนูบาร์ */
+        nav { display: flex; justify-content: space-between; background: var(--card); padding: 15px 30px; border-radius: 8px; margin-bottom: 20px; }
+        nav a { color: var(--text); text-decoration: none; padding: 0 15px; font-weight: bold; }
+        nav a:hover { color: var(--accent); }
+
+        /* ส่วนบอร์ดบริหาร */
+        .executive-board { background: var(--card); padding: 30px; border-radius: 12px; border-top: 4px solid var(--accent); text-align: center; margin-bottom: 20px; }
+        .executive-name { font-size: 24px; color: var(--accent); font-weight: bold; margin: 10px 0; }
+        .executive-title { color: #94a3b8; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>TCSN Enterprise - Contact Us</h2>
-        <p class="subtitle">ระบบส่งข้อความติดต่อผู้บริหารผ่านอีเมลองค์กรโดยตรง</p>
-        
-        <!-- ใช้ JavaScript ดึงข้อมูลจากฟอร์มแล้วเปิดโปรแกรมเมลของผู้ใช้งานเพื่อส่งทันที -->
-        <form onsubmit="sendEmail(event)">
-            <div class="form-group">
-                <label for="name">ชื่อ-นามสกุล / ผู้ติดต่อ</label>
-                <input type="text" id="name" required placeholder="กรอกชื่อของคุณ...">
-            </div>
-            <div class="form-group">
-                <label for="email">อีเมลสำหรับการติดต่อกลับ</label>
-                <input type="email" id="email" required placeholder="example@email.com">
-            </div>
-            <div class="form-group">
-                <label for="message">ข้อความ / รายละเอียดที่ต้องการติดต่อ</label>
-                <textarea id="message" rows="5" required placeholder="พิมพ์ข้อความของคุณที่นี่..."></textarea>
-            </div>
-            <button type="submit">ส่งข้อความถึงผู้บริหาร</button>
-        </form>
-    </div>
 
-    <script>
-        function sendEmail(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
+    <!-- เมนูหลัก -->
+    <nav>
+        <div><strong>TCSN Enterprise</strong></div>
+        <div>
+            <a href="#">หน้าหลัก</a>
+            <a href="#">ฝ่ายบริหาร</a>
+            <a href="#">บริการ</a>
+            <a href="#">ติดต่อ</a>
+        </div>
+    </nav>
+
+    <!-- บอร์ดฝ่ายบริหาร -->
+    <section class="executive-board">
+        <div class="executive-title">ประธานผู้บริหารสูงสุด</div>
+        <div class="executive-name">ธัญพิสิษฐ์</div>
+        <p style="color: #64748b;">Executive Board of TCSN Enterprise</p>
+    </section>
+
+</body>
+</html>
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
 
