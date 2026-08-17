@@ -1,27 +1,139 @@
-<!-- โครงสร้างเมนู (Navigation Menu) -->
-<nav>
-  <ul>
-    <li><a href="index.html">หน้าหลัก (ประชาสัมพันธ์)</a></li>
-    <li><a href="admin.html">ฝ่ายบริหาร</a></li>
-    <li><a href="contact.html">ติดต่อเรา</a></li>
-  </ul>
-</nav>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCSN Enterprise - Public Portal</title>
+    <style>
+        :root {
+            --primary-color: #1a1a2e;
+            --accent-color: #0f3460;
+            --highlight-color: #e94560;
+            --bg-color: #f4f6f9;
+            --text-color: #333333;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        /* เมนูสวยงามด้านบน */
+        header {
+            background: var(--primary-color);
+            color: #ffffff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+        nav ul li a:hover, nav ul li a.active {
+            background: var(--highlight-color);
+        }
+        /* ส่วนแสดงเนื้อหาหลัก */
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 10px;
+        }
+        /* ปุ่มกดติดต่อ */
+        .btn-contact {
+            display: inline-block;
+            background-color: var(--highlight-color);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: transform 0.2s, background 0.2s;
+        }
+        .btn-contact:hover {
+            background-color: #d73852;
+            transform: translateY(-2px);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
 
-<!-- หน้าหลัก (ประชาสัมพันธ์ - สำหรับท่านประธานพิมพ์เนื้อหา) -->
-<section id="home">
-  <h1>ยินดีต้อนรับสู่ TCSN Enterprise</h1>
-  <div class="announcement-area">
-    <!-- พื้นที่สำหรับท่านประธานระบุข้อความประชาสัมพันธ์ -->
-    <p>[ท่านประธานสามารถแก้ไข/พิมพ์รายละเอียดประชาสัมพันธ์ตรงนี้ได้เลยครับ]</p>
-  </div>
-</section>
+    <!-- เมนูนำทาง -->
+    <header>
+        <div class="logo">TCSN Enterprise</div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">หน้าหลัก</a></li>
+                <li><a href="https://tanpisidsub-collab.github.io/TCSN/" target="_blank">ฝ่ายบริหาร</a></li>
+                <li><a href="#contact">ติดต่อเรา</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- หน้าติดต่อเรา (Contact Page) -->
-<section id="contact">
-  <h1>ติดต่อเรา</h1>
-  <p>ท่านสามารถติดต่อทีมงานหรือส่งข้อความถึงเราได้โดยตรงผ่านช่องทางด้านล่างนี้ครับ</p>
-  <div class="contact-info">
-    <p><strong>อีเมล:</strong> contact@tcsn-enterprise.com</p>
-    <a href="mailto:contact@tcsn-enterprise.com" style="padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px;">คลิกที่นี่เพื่อส่งอีเมล</a>
-  </div>
-</section>
+    <!-- เนื้อหาหลัก -->
+    <main>
+        <!-- หน้าหลัก: รายละเอียดและประชาสัมพันธ์ -->
+        <section id="home" class="card">
+            <h2>ยินดีต้อนรับสู่ TCSN Enterprise</h2>
+            <div id="announcement-content">
+                <!-- พื้นที่สำหรับท่านประธานพิมพ์รายละเอียดหรือประกาศ -->
+                <p><strong>[พื้นที่สำหรับประกาศและประชาสัมพันธ์]:</strong> ท่านประธานสามารถแจ้งข้อความหรือข่าวสารที่ต้องการให้ผมนำมาอัปเดตลงในส่วนนี้ได้ตลอดเวลาครับ</p>
+            </div>
+        </section>
+
+        <!-- หน้าติดต่อ: โชว์อีเมลและปุ่มกด -->
+        <section id="contact" class="card">
+            <h2>ช่องทางการติดต่อ</h2>
+            <p>หากท่านต้องการติดต่อสอบถามข้อมูลเพิ่มเติม สามารถส่งข้อความหาเราได้โดยตรงผ่านอีเมลฝ่ายบริหาร:</p>
+            <p style="margin-top: 15px; font-size: 1.1rem;"><strong>อีเมลสำนักงาน:</strong> <span style="color: var(--highlight-color);">contact@tcsn-enterprise.com</span></p>
+            <a href="mailto:contact@tcsn-enterprise.com" class="btn-contact">📧 คลิกเพื่อส่งอีเมลติดต่อเรา</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TCSN Enterprise. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
