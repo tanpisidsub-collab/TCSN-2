@@ -2,33 +2,111 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>TCSN Enterprise | Main Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCSN Enterprise - หน้าหลัก</title>
     <style>
-        :root { --bg: #0f172a; --card: #1e293b; --accent: #38bdf8; --text: #f8fafc; }
-        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 20px; }
-        nav { display: flex; justify-content: space-between; background: var(--card); padding: 15px 30px; border-radius: 8px; margin-bottom: 20px; }
-        nav a { color: var(--text); text-decoration: none; padding: 0 15px; font-weight: bold; }
-        nav a:hover { color: var(--accent); }
-        .container { background: var(--card); padding: 30px; border-radius: 12px; border-left: 4px solid var(--accent); }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #0a101f; 
+            color: #ffffff; 
+            margin: 0; 
+        }
+        header { 
+            background-color: #1a2234; 
+            padding: 1.2rem 2rem; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1px solid #2d3748; 
+        }
+        .logo { 
+            font-weight: bold; 
+            font-size: 1.2rem; 
+            color: #ffffff; 
+        }
+        nav ul { 
+            list-style: none; 
+            display: flex; 
+            gap: 25px; 
+            margin: 0; 
+            padding: 0; 
+        }
+        nav ul li a { 
+            color: #cbd5e1; 
+            text-decoration: none; 
+            font-size: 0.95rem; 
+            transition: color 0.2s; 
+        }
+        nav ul li a:hover, nav ul li a.active { 
+            color: #ffffff; 
+            font-weight: bold; 
+        }
+        .container { 
+            margin: 2.5rem auto; 
+            max-width: 800px; 
+            padding: 2rem; 
+            background-color: #1a2234; 
+            border-radius: 8px; 
+            border: 1px solid #2d3748; 
+        }
+        h1 { 
+            font-size: 1.4rem; 
+            margin-top: 0; 
+            color: #ffffff; 
+            border-bottom: 2px solid #2d3748;
+            padding-bottom: 10px;
+        }
+        .section-box {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #0f172a;
+            border-radius: 6px;
+            border-left: 4px solid #2563eb;
+        }
+        .section-box h3 {
+            margin-top: 0;
+            color: #60a5fa;
+            font-size: 1.1rem;
+        }
+        .content-area {
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
 
-    <!-- เมนูสำหรับหน้าหลัก -->
-    <nav>
-        <div><strong>TCSN Enterprise</strong></div>
-        <div>
-            <a href="index.html">หน้าหลัก</a>
-            <a href="executive.html">ฝ่ายบริหาร</a>
-        </div>
-    </nav>
+    <header>
+        <div class="logo">TCSN Enterprise</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">หน้าหลัก</a></li>
+                <li><a href="contact.html">ติดต่อเรา</a></li>
+                <li><a href="https://tanpisidsub-collab.github.io/TCSN/" target="_blank">ฝ่ายบริหาร</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- หน้าหลัก: แสดงเฉพาะช่องทางติดต่อ -->
-    <section class="container">
-        <h2>ช่องทางติดต่อองค์กร</h2>
-        <p>อีเมล: thaicybersecuritynormal@gmail.com</p>
-        <button onclick="window.location.href='mailto:thaicybersecuritynormal@gmail.com'" style="padding:10px; background:var(--accent); border:none; border-radius:5px; cursor:pointer;">ส่งอีเมลถึงเรา</button>
-    </section>
+    <div class="container">
+        <h1>หน้าหลัก</h1>
+        
+        <!-- ส่วนประชาสัมพันธ์ -->
+        <div class="section-box">
+            <h3>ประชาสัมพันธ์</h3>
+            <div class="content-area">
+                <p>[พื้นที่สำหรับประกาศข่าวสารและข้อความประชาสัมพันธ์จากท่านประธาน]</p>
+            </div>
+        </div>
+
+        <!-- ส่วนรายละเอียดองค์กร -->
+        <div class="section-box" style="border-left-color: #10b981;">
+            <h3 style="color: #34d399;">รายละเอียดองค์กร</h3>
+            <div class="content-area">
+                <p><strong>TCSN Enterprise:</strong> องค์กรผู้เชี่ยวชาญด้านความปลอดภัยทางไซเบอร์และเทคโนโลยีระดับมาตรฐานสากล มุ่งมั่นขับเคลื่อนนโยบายความมั่นคงปลอดภัยของข้อมูลและระบบสารสนเทศเพื่อความยั่งยืน</p>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
