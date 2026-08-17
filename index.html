@@ -5,78 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TCSN Enterprise - หน้าหลัก</title>
     <style>
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background-color: #0a101f; 
-            color: #ffffff; 
-            margin: 0; 
-        }
-        header { 
-            background-color: #1a2234; 
-            padding: 1.2rem 2rem; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            border-bottom: 1px solid #2d3748; 
-        }
-        .logo { 
-            font-weight: bold; 
-            font-size: 1.2rem; 
-            color: #ffffff; 
-        }
-        nav ul { 
-            list-style: none; 
-            display: flex; 
-            gap: 25px; 
-            margin: 0; 
-            padding: 0; 
-        }
-        nav ul li a { 
-            color: #cbd5e1; 
-            text-decoration: none; 
-            font-size: 0.95rem; 
-            transition: color 0.2s; 
-        }
-        nav ul li a:hover, nav ul li a.active { 
-            color: #ffffff; 
-            font-weight: bold; 
-        }
-        .container { 
-            margin: 2.5rem auto; 
-            max-width: 800px; 
-            padding: 2rem; 
-            background-color: #1a2234; 
-            border-radius: 8px; 
-            border: 1px solid #2d3748; 
-        }
-        h1 { 
-            font-size: 1.4rem; 
-            margin-top: 0; 
-            color: #ffffff; 
-            border-bottom: 2px solid #2d3748;
-            padding-bottom: 10px;
-        }
-        .section-box {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #0f172a;
-            border-radius: 6px;
-            border-left: 4px solid #2563eb;
-        }
-        .section-box h3 {
-            margin-top: 0;
-            color: #60a5fa;
-            font-size: 1.1rem;
-        }
-        .content-area {
-            color: #cbd5e1;
-            line-height: 1.6;
-            margin: 0;
-        }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #0a101f; color: #ffffff; margin: 0; }
+        header { background-color: #1a2234; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #2d3748; }
+        .logo { font-weight: bold; font-size: 1.2rem; }
+        nav ul { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
+        nav ul li a { color: #cbd5e1; text-decoration: none; font-size: 0.95rem; }
+        nav ul li a.active { color: #ffffff; font-weight: bold; }
+        .container { margin: 2.5rem auto; max-width: 800px; padding: 2rem; background-color: #1a2234; border-radius: 8px; border: 1px solid #2d3748; }
+        h1 { font-size: 1.4rem; border-bottom: 2px solid #2d3748; padding-bottom: 10px; }
+        .section-box { margin-top: 20px; padding: 15px; background-color: #0f172a; border-radius: 6px; border-left: 4px solid #2563eb; }
+        .section-box h3 { color: #60a5fa; font-size: 1.1rem; }
+        .content-area { color: #cbd5e1; line-height: 1.6; }
     </style>
 </head>
 <body>
-
     <header>
         <div class="logo">TCSN Enterprise</div>
         <nav>
@@ -86,19 +28,14 @@
             </ul>
         </nav>
     </header>
-
     <div class="container">
         <h1>หน้าหลัก - ประชาสัมพันธ์</h1>
-        
-        <!-- ส่วนประชาสัมพันธ์ (ระบุชื่อท่านประธาน) -->
         <div class="section-box">
             <h3>ประชาสัมพันธ์โดย: ท่านประธานธัญพิสิษฐ์</h3>
             <div class="content-area">
-                <p>[พื้นที่สำหรับข้อความข่าวสารหรือประกาศที่ท่านประธานต้องการเผยแพร่]</p>
+                <p><strong>ประกาศสำคัญ:</strong> ทางเราคือองค์กรอิสระ ไม่ได้ทำงานให้รัฐและราชการ โปรดอย่าเข้าใจผิด</p>
             </div>
         </div>
-
-        <!-- ส่วนรายละเอียดองค์กร -->
         <div class="section-box" style="border-left-color: #10b981;">
             <h3 style="color: #34d399;">รายละเอียดองค์กร</h3>
             <div class="content-area">
@@ -106,7 +43,6 @@
             </div>
         </div>
     </div>
-
 </body>
 </html>
 
