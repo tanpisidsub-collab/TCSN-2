@@ -2,55 +2,49 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>Main Portal - TCSN Enterprise</title>
+    <title>TCSN Enterprise | Main Portal</title>
     <style>
         :root { --bg: #0f172a; --card: #1e293b; --accent: #38bdf8; --text: #f8fafc; }
         body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 20px; }
         
-        /* เมนูบาร์ */
+        /* Navigation */
         nav { display: flex; justify-content: space-between; background: var(--card); padding: 15px 30px; border-radius: 8px; margin-bottom: 20px; }
         nav a { color: var(--text); text-decoration: none; padding: 0 15px; font-weight: bold; }
         nav a:hover { color: var(--accent); }
 
-        /* ส่วนบอร์ดบริหาร */
-        .executive-board { background: var(--card); padding: 30px; border-radius: 12px; border-top: 4px solid var(--accent); text-align: center; margin-bottom: 20px; }
-        .executive-name { font-size: 24px; color: var(--accent); font-weight: bold; margin: 10px 0; }
-        .executive-title { color: #94a3b8; font-size: 18px; text-transform: uppercase; letter-spacing: 1px; }
+        /* Sections */
+        .container { background: var(--card); padding: 30px; border-radius: 12px; margin-bottom: 20px; border-left: 4px solid var(--accent); }
+        h2 { color: var(--accent); margin-top: 0; }
+        
+        /* Executive Profile */
+        .executive-name { font-size: 28px; color: var(--accent); font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <!-- เมนูหลัก -->
+    <!-- Navigation -->
     <nav>
         <div><strong>TCSN Enterprise</strong></div>
         <div>
-            <a href="#">หน้าหลัก</a>
-            <a href="#">ฝ่ายบริหาร</a>
-            <a href="#">บริการ</a>
-            <a href="#">ติดต่อ</a>
+            <a href="#home">หน้าหลัก</a>
+            <a href="#executive">ฝ่ายบริหาร</a>
+            <a href="#contact">ติดต่อ</a>
         </div>
     </nav>
 
-    <!-- บอร์ดฝ่ายบริหาร -->
-    <section class="executive-board">
-        <div class="executive-title">ประธานผู้บริหารสูงสุด</div>
+    <!-- Executive Board Section -->
+    <section id="executive" class="container">
+        <h2>ฝ่ายบริหาร</h2>
+        <p>ประธานผู้บริหารสูงสุด</p>
         <div class="executive-name">ธัญพิสิษฐ์</div>
-        <p style="color: #64748b;">Executive Board of TCSN Enterprise</p>
     </section>
 
-</body>
-</html>
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <h2>ช่องทางติดต่อองค์กร</h2>
+        <p>อีเมล: thaicybersecuritynormal@gmail.com</p>
+        <button onclick="window.location.href='mailto:thaicybersecuritynormal@gmail.com'" style="padding:10px; background:var(--accent); border:none; border-radius:5px; cursor:pointer;">ส่งอีเมลถึงเรา</button>
+    </section>
 
-            // กำหนดอีเมลผู้รับหลักขององค์กร (ท่านประธานสามารถเปลี่ยนอีเมลนี้ได้ตามต้องการ)
-            const recipient = "thaicybersecuritynormal@gmail.com";
-            const subject = encodeURIComponent("ติดต่อจากระบบพอร์ทัล: " + name);
-            const body = encodeURIComponent("ชื่อผู้ติดต่อ: " + name + "\nอีเมล: " + email + "\n\nข้อความ:\n" + message);
-
-            // เปิดแอปพลิเคชันอีเมลเพื่อส่งข้อความอัตโนมัติ
-            window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
-        }
-    </script>
 </body>
 </html>
