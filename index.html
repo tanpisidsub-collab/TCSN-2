@@ -3,162 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Executive Dashboard & Main Website</title>
+    <title>TCSN Enterprise - หน้าหลัก</title>
     <style>
-        :root {
-            --primary-color: #0f172a;
-            --accent-color: #3b82f6;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-color: #334155;
-            --border-color: #e2e8f0;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 1.8rem;
-        }
-
-        header p {
-            color: #94a3b8;
-            margin-top: 0.5rem;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .section {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-
-        .section h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 0.5rem;
-            margin-top: 0;
-            font-size: 1.4rem;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .card {
-            background: #f1f5f9;
-            padding: 1rem;
-            border-radius: 6px;
-            border-left: 4px solid var(--accent-color);
-        }
-
-        .card h3 {
-            margin-top: 0;
-            color: var(--primary-color);
-            font-size: 1.1rem;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 0.25rem 0.5rem;
-            font-size: 0.75rem;
-            font-weight: bold;
-            color: white;
-            background-color: #10b981;
-            border-radius: 4px;
-            margin-bottom: 0.5rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            color: #64748b;
-            font-size: 0.85rem;
-            border-top: 1px solid var(--border-color);
-            margin-top: 3rem;
-        }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #0a101f; color: #ffffff; margin: 0; }
+        header { background-color: #1a2234; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #2d3748; }
+        .logo { font-weight: bold; font-size: 1.2rem; }
+        nav ul { list-style: none; display: flex; gap: 25px; margin: 0; padding: 0; }
+        nav ul li a { color: #cbd5e1; text-decoration: none; font-size: 0.95rem; }
+        nav ul li a.active { color: #ffffff; font-weight: bold; }
+        .container { margin: 2.5rem auto; max-width: 800px; padding: 2rem; background-color: #1a2234; border-radius: 8px; border: 1px solid #2d3748; }
+        h1 { font-size: 1.4rem; border-bottom: 2px solid #2d3748; padding-bottom: 10px; }
+        .section-box { margin-top: 20px; padding: 15px; background-color: #0f172a; border-radius: 6px; border-left: 4px solid #2563eb; }
+        .section-box h3 { color: #60a5fa; font-size: 1.1rem; }
+        .content-area { color: #cbd5e1; line-height: 1.6; }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>Executive Portal & Security Trust Center</h1>
-        <p>ระบบจัดการสารสนเทศและมาตรการความมั่นคงปลอดภัยองค์กร</p>
+        <div class="logo">TCSN Enterprise</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">หน้าหลัก</a></li>
+                <li><a href="contact.html">ติดต่อเรา</a></li>
+            </ul>
+        </nav>
     </header>
-
     <div class="container">
-        <!-- ส่วนที่ 1: มาตรการยกระดับความปลอดภัย -->
-        <div class="section">
-            <h2>🛡️ มาตรการยกระดับความปลอดภัย (Security & Compliance Measures)</h2>
-            <p>เพื่อปกป้องโครงสร้างพื้นฐานและข้อมูลสำคัญขององค์กรภายใต้มาตรฐานสูงสุด:</p>
-            
-            <div class="grid">
-                <div class="card">
-                    <span class="badge">Active</span>
-                    <h3>ระบบยืนยันตัวตน 2FA</h3>
-                    <p>บังคับใช้การยืนยันตัวตนแบบหลายชั้นสำหรับผู้ดูแลระบบ (Admin) ทั้งเว็บไซต์หลักและเว็บไซต์รอง</p>
-                </div>
-                <div class="card">
-                    <span class="badge">Active</span>
-                    <h3>PDPA Compliance</h3>
-                    <p>ตรวจสอบและปรับปรุงการจัดเก็บข้อมูลส่วนบุคคล พร้อมประกาศนโยบายความเป็นส่วนตัวอย่างโปร่งใส</p>
-                </div>
-                <div class="card">
-                    <span class="badge">In Progress</span>
-                    <h3>Proactive Risk Management</h3>
-                    <p>ตรวจสอบช่องโหว่ระบบและอัปเดตเกราะป้องกันความปลอดภัย (WAF/Firewall) อย่างสม่ำเสมอ</p>
-                </div>
+        <h1>หน้าหลัก - ประชาสัมพันธ์</h1>
+        <div class="section-box">
+            <h3>ประชาสัมพันธ์โดย: ท่านประธานธัญพิสิษฐ์</h3>
+            <div class="content-area">
+                <p><strong>ประกาศสำคัญ:</strong> ทางเราคือองค์กรอิสระ ไม่ได้ทำงานให้รัฐและราชการ โปรดอย่าเข้าใจผิด</p>
             </div>
         </div>
-
-        <!-- ส่วนที่ 2: โครงการที่กำลังขับเคลื่อน -->
-        <div class="section">
-            <h2>🚀 โครงการที่กำลังขับเคลื่อน (Active Initiatives)</h2>
-            <p>การดำเนินงานเพื่อส่งเสริมและพัฒนาเทคโนโลยีสารสนเทศ:</p>
-            
-            <div class="grid">
-                <div class="card">
-                    <span class="badge" style="background-color: #3b82f6;">Ongoing</span>
-                    <h3>โครงการพัฒนาเยาวชนและกำลังคนไซเบอร์</h3>
-                    <p>ส่งเสริมเยาวชนรุ่นใหม่ให้มีความรู้ความสามารถด้านความมั่นคงปลอดภัยไซเบอร์ พร้อมสร้างเครือข่ายความร่วมมือกับหน่วยงานภาครัฐ</p>
-                </div>
-                <div class="card">
-                    <span class="badge" style="background-color: #3b82f6;">Ongoing</span>
-                    <h3>โครงการยกระดับโครงสร้างพื้นฐานดิจิทัล</h3>
-                    <p>พัฒนาระบบไอทีและช่องทางการสื่อสารขององค์กรให้มีความเสถียร รวดเร็ว และรองรับการใช้งานระดับองค์กรได้เต็มรูปแบบ</p>
-                </div>
+        <div class="section-box" style="border-left-color: #10b981;">
+            <h3 style="color: #34d399;">รายละเอียดองค์กร</h3>
+            <div class="content-area">
+                <p><strong>TCSN Enterprise:</strong> องค์กรผู้เชี่ยวชาญด้านความปลอดภัยทางไซเบอร์และเทคโนโลยีระดับมาตรฐานสากล มุ่งมั่นขับเคลื่อนนโยบายความมั่นคงปลอดภัยของข้อมูลและระบบสารสนเทศเพื่อความยั่งยืน</p>
             </div>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2026 Executive Office & Security Operations. All rights reserved.</p>
-    </footer>
-
 </body>
 </html>
+
